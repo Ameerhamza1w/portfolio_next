@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                             </Link>
                         </div>
                         <ul className="space-y-6 text-center">
-                            {['Home', 'About', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
+                            {['About', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <Link
                                         href={`/${item.toLowerCase()}`}
