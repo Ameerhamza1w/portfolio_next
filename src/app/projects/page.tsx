@@ -22,7 +22,7 @@ const ProjectsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-700 mb-4">Todo List</h3>
             <Image
-              src="/todolist.PNG"
+              src="/todo.PNG"
               alt="Todo List Project"
               width={400}
               height={300}
