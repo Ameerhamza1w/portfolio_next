@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
         {/* Social Media Section */}
         <div className="text-center md:text-right">
           <h2 className="text-2xl font-bold text-white mb-4">Stay Connected</h2>
-          <div className="flex justify-center md:justify-end space-x-6">
+          <div className="flex justify-center md:justify-end space-x-6 mb-6 md:mb-0">
             <a
               href="https://www.linkedin.com/in/ameerhamzamemon"
               className="hover:text-blue-500 transition duration-300"

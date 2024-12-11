@@ -3,23 +3,23 @@ import Link from 'next/link';
 
 const ContactPage = () => {
   return (
-    <section className="bg-gradient-to-b from-gray-100 via-indigo-50 to-white text-gray-800 p-12 space-y-16 rounded-lg shadow-lg">
+    <section className="bg-gradient-to-b from-gray-100 via-indigo-50 to-white text-gray-800 p-8 sm:p-12 space-y-12 sm:space-y-16 rounded-lg shadow-lg">
 
       {/* Header Section */}
-      <div className="text-center space-y-6">
-        <h2 className="text-5xl font-extrabold text-indigo-600">
+      <div className="text-center space-y-4 sm:space-y-6">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-indigo-600">
           Get in <span className="text-gray-800">Touch</span>
         </h2>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg sm:text-xl text-gray-600">
           Let’s work together to create something amazing!
         </p>
       </div>
 
-      <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between gap-10">
+      <div className="container mx-auto flex flex-col sm:flex-row lg:justify-between gap-8 sm:gap-10">
 
         {/* Contact Information Section */}
-        <div className="lg:w-1/2 bg-indigo-600 p-8 rounded-lg shadow-md space-y-6 text-white">
-          <h3 className="text-3xl font-semibold">Contact</h3>
+        <div className="sm:w-1/2 bg-indigo-600 p-6 sm:p-8 rounded-lg shadow-md space-y-6 text-white">
+          <h3 className="text-2xl sm:text-3xl font-semibold">Contact</h3>
           <p>
             Reach out via email or phone, or connect with me on social media.
           </p>

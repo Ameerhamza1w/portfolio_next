@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaReact, FaNodeJs, FaPython, FaPlug, FaGitAlt } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiTailwindcss, SiJest } from 'react-icons/si';
 
@@ -6,41 +5,96 @@ const SkillsPage: React.FC = () => {
     return (
         <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-100" id="skills">
             <div className="container mx-auto px-6">
-                
+
                 {/* Page Title */}
-                <h1 className="text-5xl font-bold text-center mb-12 text-gray-800">
-                    My <span className="text-teal-600"> Skills</span>
+                <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
+                    <span className="text-purple-600">My</span> Core Skills
                 </h1>
 
-                {/* Technical Skills Section */}
-                <h2 className="text-3xl font-semibold text-center mb-10 text-gray-700">Technical Skills</h2>
-                
-                {/* Skill Bars */}
-                <div className="space-y-10">
-                    {[ 
-                        { icon: <FaReact className="text-5xl text-blue-500 mr-4" />, skill: 'React', percentage: '90%', color: 'bg-blue-500' },
-                        { icon: <FaNodeJs className="text-5xl text-green-500 mr-4" />, skill: 'Node.js', percentage: '85%', color: 'bg-green-500' },
-                        { icon: <FaPython className="text-5xl text-yellow-400 mr-4" />, skill: 'Python', percentage: '75%', color: 'bg-yellow-400' },
-                        { icon: <FaPlug className="text-5xl text-orange-500 mr-4" />, skill: 'PLC Ladder Logic', percentage: '70%', color: 'bg-orange-500' },
-                        { icon: <FaGitAlt className="text-5xl text-red-600 mr-4" />, skill: 'Git', percentage: '80%', color: 'bg-red-600' },
-                        { icon: <SiTypescript className="text-5xl text-blue-500 mr-4" />, skill: 'TypeScript', percentage: '70%', color: 'bg-indigo-500' },
-                        { icon: <SiNextdotjs className="text-5xl text-gray-800 mr-4" />, skill: 'Next.js', percentage: '60%', color: 'bg-gray-600' },
-                        { icon: <SiTailwindcss className="text-5xl text-teal-400 mr-4" />, skill: 'Tailwind CSS', percentage: '65%', color: 'bg-teal-400' },
-                        { icon: <SiJest className="text-5xl text-green-600 mr-4" />, skill: 'Jest', percentage: '10%', color: 'bg-green-600' },
-                    ].map(({ icon, skill, percentage, color }) => (
-                        <div className="flex items-center" key={skill}>
-                            {icon}
-                            <div className="flex-1 ml-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-lg font-medium text-gray-800">{skill}</span>
-                                    <span className="font-semibold text-gray-700">{percentage}</span>
-                                </div>
-                                <div className="w-full bg-gray-200 rounded-full h-3">
-                                    <div className={`${color} h-3 rounded-full`} style={{ width: percentage }}></div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    {/* React */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <FaReact className="text-6xl sm:text-7xl text-blue-500 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">React</h2>
+                        <p className="text-gray-700">
+                            Building dynamic and responsive user interfaces with React and modern frontend tools.
+                        </p>
+                    </div>
+
+                    {/* Node.js */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <FaNodeJs className="text-6xl sm:text-7xl text-green-500 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Node.js</h2>
+                        <p className="text-gray-700">
+                            Backend development with Node.js for scalable, high-performance server-side applications.
+                        </p>
+                    </div>
+
+                    {/* Python */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <FaPython className="text-6xl sm:text-7xl text-yellow-400 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Python</h2>
+                        <p className="text-gray-700">
+                            Basic scripting and automation with Python for tasks like data manipulation and web scraping.
+                        </p>
+                    </div>
+
+                    {/* PLC Ladder Logic */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <FaPlug className="text-6xl sm:text-7xl text-orange-500 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">PLC Ladder Logic</h2>
+                        <p className="text-gray-700">
+                            Designing industrial automation systems with PLCs using ladder logic for process control.
+                        </p>
+                    </div>
+
+                    {/* Git */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <FaGitAlt className="text-6xl sm:text-7xl text-red-600 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Git</h2>
+                        <p className="text-gray-700">
+                            Mastery in version control with Git for managing collaborative software projects.
+                        </p>
+                    </div>
+
+                    {/* TypeScript */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <SiTypescript className="text-6xl sm:text-7xl text-blue-500 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">TypeScript</h2>
+                        <p className="text-gray-700">
+                            Leveraging TypeScript to build maintainable, robust, and scalable applications with a focus on type safety.
+                        </p>
+                    </div>
+
+                    {/* Next.js */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <SiNextdotjs className="text-6xl sm:text-7xl text-gray-800 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Next.js</h2>
+                        <p className="text-gray-700">
+                            Optimizing web applications with Next.js for server-side rendering (SSR) and static site generation (SSG).
+                        </p>
+                    </div>
+
+                    {/* Tailwind CSS */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <SiTailwindcss className="text-6xl sm:text-7xl text-teal-400 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Tailwind CSS</h2>
+                        <p className="text-gray-700">
+                            Designing modern, responsive, and minimalist UI with Tailwind CSS using a utility-first approach.
+                        </p>
+                    </div>
+
+                    {/* Jest */}
+                    <div className="service-card bg-white shadow-xl rounded-lg p-8 text-center hover:bg-purple-50 transition duration-300">
+                        <SiJest className="text-6xl sm:text-7xl text-green-600 mb-4" />
+                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Jest</h2>
+                        <p className="text-gray-700">
+                            Writing unit and integration tests with Jest to ensure application reliability and quality.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
